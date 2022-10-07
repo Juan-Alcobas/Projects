@@ -1,3 +1,10 @@
+#
+ # This class is designed to scrape through a webpage and save the data to a csv file
+ # 
+ # @author Juan Alcobas, 10/22
+ #
+#
+
 import requests
 from bs4 import BeautifulSoup
 import pandas
