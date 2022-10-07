@@ -47,11 +47,8 @@ public class Array2DTester {
 		System.out.println(test.toString());
 		
 		test.deleteRow(0);
-		
+	
 		System.out.println(test.toString());
-//		System.out.println(test.toStringColByCol());
-		
-
 	}
 
 }
