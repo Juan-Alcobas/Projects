@@ -24,22 +24,10 @@ public class Array2D<E> {
 	}
 
 	public Array2D(E[][] values) {
-//		this.rowSize = values[0].length;
-//		this.colSize = values.length;
 
-//		for(int row=0;row<values[0].length;row++) {//3
-//			
-//			for(int col=0;col<values.length;col++) {//4
-//				
-//			}
-//			
-//		}
 		this.rowSize = values[0].length;
 		this.colSize = values.length;
 		for (int counter = values.length; counter > 0; counter--) {
-//			E type=  values.getClass();
-//			type [] intArray;
-//			intArray=new type [values.length];
 			addFirstCol(values[0]);
 		}
 
@@ -81,7 +69,6 @@ public class Array2D<E> {
 		this.colSize++;
 	}
 
-	// Should probably go back and work out the logic of this one idk
 	/**
 	 * Adds a set of values to be the first row in the 2D linkedList
 	 * 
@@ -265,7 +252,7 @@ public class Array2D<E> {
 		if (index == 0) {
 			this.addFirstRow(values);
 		} 
-		else if (index < 0 || index > this.rowSize) {// if rowSize is less than 1 no, = to 0 no,
+		else if (index < 0 || index > this.rowSize) {
 			throw new IndexOutOfBoundsException("Index is out of bounds");
 		} 
 		else if (index == this.rowSize) {
@@ -321,7 +308,6 @@ public class Array2D<E> {
 			Array2DNode current = head;
 			Array2DNode prev = head;
 			head = current.nextCol;
-//			colTail.nextCol = colTail;
 			prev = null;
 			this.colSize--;
 
@@ -432,7 +418,7 @@ public class Array2D<E> {
 				current = current.nextRow;
 			}
 			while (prev != null) {
-				prev = null;// does this delete it all
+				prev = null;
 				this.colSize--;
 			}
 		}
@@ -466,7 +452,7 @@ public class Array2D<E> {
 				current = current.nextCol;
 			}
 			while (prev != null) {
-				prev = null;// does this delete it all
+				prev = null;
 				this.rowSize--;
 			}
 		}
